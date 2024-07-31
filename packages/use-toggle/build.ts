@@ -6,11 +6,10 @@ import fs from 'fs'
 fs.rmdirSync('dist', { recursive: true })
 console.log(`Cleaned up dist directory`)
 
-const deps = Object.keys(pkg.dependencies || {})
 const peerDeps = Object.keys(pkg.peerDependencies || {})
 const devDeps = Object.keys(pkg.devDependencies || {})
 
-const external = [...deps, ...peerDeps, ...devDeps]
+const external = [...peerDeps, ...devDeps]
 
 // Module build for production
 esbuild.buildSync({
