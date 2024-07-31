@@ -1,0 +1,29 @@
+{
+  "name": "@tetherite/use-debounce",
+  "description": "Tetherite is a collection of React hooks that make it easier to build complex UIs.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Dominik Biedebach",
+    "email": "dominik@bdbch.com",
+    "url": "https://github.com/bdbch"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "bun build.ts",
+    "build": "bun build.ts"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "react": ">=16.8.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": ["dist"]
+}

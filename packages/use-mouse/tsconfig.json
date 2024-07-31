@@ -1,0 +1,3 @@
+{
+  "extends": "@tetherite/typescript-config/react-library.json"
+}

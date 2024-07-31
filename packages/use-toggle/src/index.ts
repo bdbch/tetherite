@@ -1,5 +1,5 @@
 import { useToggle } from "./use-toggle";
 
-export { useToggle };
+export * from "./use-toggle";
 
 export default useToggle;
