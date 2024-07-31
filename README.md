@@ -1,5 +1,5 @@
-[![Build packages](https://github.com/bdbch/haken/actions/workflows/build.yaml/badge.svg)](https://github.com/bdbch/haken/actions/workflows/build.yaml)
-[![Release packages](https://github.com/bdbch/haken/actions/workflows/release.yaml/badge.svg)](https://github.com/bdbch/haken/actions/workflows/release.yaml)
+[![Build packages](https://github.com/bdbch/tetherite/actions/workflows/build.yaml/badge.svg)](https://github.com/bdbch/tetherite/actions/workflows/build.yaml)
+[![Release packages](https://github.com/bdbch/tetherite/actions/workflows/release.yaml/badge.svg)](https://github.com/bdbch/tetherite/actions/workflows/release.yaml)
 
 <p style="text-align: center">
 <img src="./.github/icon.png" />
