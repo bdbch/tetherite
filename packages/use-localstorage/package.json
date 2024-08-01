@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "bun build.ts",
     "build": "bun build.ts",
-    "release": "bun run release && npm publish"
+    "release": "bun run build && npm publish"
   },
   "devDependencies": {
     "esbuild": "^0.23.0",
