@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from 'react';
 
 /**
  * **useMouse**
@@ -20,16 +20,30 @@ export const useMouse = (container: MouseContainer = window): MouseState => {
     };
 
     if (container instanceof HTMLElement) {
-      container.addEventListener("mousemove", handleMouseMove);
+      container.addEventListener('mousemove', handleMouseMove);
     } else if (container === window) {
-      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener('mousemove', handleMouseMove);
     } else if (
       container instanceof Object &&
-      "current" in container &&
+      'current' in container &&
       container.current instanceof HTMLElement
     ) {
-      container.current.addEventListener("mousemove", handleMouseMove);
+      container.current.addEventListener('mousemove', handleMouseMove);
     }
+
+    return () => {
+      if (container instanceof HTMLElement) {
+        container.removeEventListener('mousemove', handleMouseMove);
+      } else if (container === window) {
+        window.removeEventListener('mousemove', handleMouseMove);
+      } else if (
+        container instanceof Object &&
+        'current' in container &&
+        container.current instanceof HTMLElement
+      ) {
+        container.current.removeEventListener('mousemove', handleMouseMove);
+      }
+    };
   }, [container]);
 
   return { x, y };
