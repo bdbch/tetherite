@@ -28,7 +28,7 @@ export const useLocalStorage = <T>(
     pollingInterval: false,
   }
 ): UseLocalStorageValue<T> => {
-  const [value, setValue] = useState(initialValue);
+  const [value, setValue] = useState<T>();
 
   const setStoredValue = useCallback(
     (newValue: T) => {
@@ -48,7 +48,7 @@ export const useLocalStorage = <T>(
         setStoredValue(tryParse(storedValue));
       }
 
-      localStorage.setItem(key, JSON.stringify(storedValue));
+      localStorage.setItem(key, JSON.stringify(initialValue));
     }
   }, [key, initialValue]);
 
@@ -84,4 +84,4 @@ export const useLocalStorage = <T>(
   return [value, setStoredValue];
 };
 
-export type UseLocalStorageValue<T = any> = [T, (value: T) => void];
+export type UseLocalStorageValue<T = any> = [T | undefined, (value: T) => void];

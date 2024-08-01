@@ -1,6 +1,7 @@
 import esbuild from 'esbuild'
 import pkg from './package.json'
 import fs from 'fs'
+import childProcess from 'child_process'
 
 // remove dist folder
 fs.rmdirSync('dist', { recursive: true })
@@ -34,3 +35,7 @@ esbuild.buildSync({
   external,
 })
 console.log(`Built CommonJS to ${pkg.main}`)
+
+// build declaration file
+childProcess.execSync('tsc')
+console.log(`Built declaration files to ${pkg.types}`)
