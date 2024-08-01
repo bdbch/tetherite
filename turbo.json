@@ -22,6 +22,9 @@
     "dev:demo": {
       "cache": false,
       "persistent": true
+    },
+    "release": {
+      "dependsOn": ["^release"]
     }
   }
 }

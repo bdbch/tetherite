@@ -10,7 +10,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "bun build.ts",
-    "build": "bun build.ts"
+    "build": "bun build.ts",
+    "release": "bun run release && npm publish"
   },
   "devDependencies": {
     "esbuild": "^0.23.0",
@@ -32,5 +33,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
