@@ -1,7 +1,7 @@
 {
   "name": "@tetherite/use-shortcut",
   "description": "Tetherite is a collection of React hooks that make it easier to build complex UIs.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": {
     "name": "Dominik Biedebach",
     "email": "dominik@bdbch.com",
