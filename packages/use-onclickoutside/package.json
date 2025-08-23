@@ -1,0 +1,39 @@
+{
+  "name": "@tetherite/use-onclickoutside",
+  "description": "Tetherite is a collection of React hooks that make it easier to build complex UIs.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dominik Biedebach",
+    "email": "dominik@bdbch.com",
+    "url": "https://github.com/bdbch"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "node build.ts",
+    "build": "node build.ts",
+    "release": "npm run build && npm publish"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "react": ">=16.8.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ]
+}

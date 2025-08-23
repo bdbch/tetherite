@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tetherite/use-async": "*",
+    "@tetherite/use-counter": "*",
     "@tetherite/use-debounce": "*",
     "@tetherite/use-input": "*",
     "@tetherite/use-localstorage": "*",
     "@tetherite/use-mouse": "*",
+    "@tetherite/use-onclickoutside": "*",
     "@tetherite/use-shortcut": "*",
     "@tetherite/use-toggle": "*",
     "react": "^18",

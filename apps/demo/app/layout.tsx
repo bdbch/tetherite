@@ -32,10 +32,13 @@ export default function RootLayout({
           <div className="hidden md:block flex-none w-full max-w-xs border-r border-neutral-300 h-dvh overflow-auto p-6">
             <div className="text-lg font-bold">Demos</div>
             <ul className="space-y-1.5 mt-4">
+              <li><NavLink href="/demos/use-async" label="useAsync" /></li>
+              <li><NavLink href="/demos/use-counter" label="useCounter" /></li>
               <li><NavLink href="/demos/use-debounce" label="useDebounce" /></li>
               <li><NavLink href="/demos/use-input" label="useInput" /></li>
               <li><NavLink href="/demos/use-localstorage" label="useLocalStorage" /></li>
               <li><NavLink href="/demos/use-mouse" label="useMouse" /></li>
+              <li><NavLink href="/demos/use-onclickoutside" label="useOnClickOutside" /></li>
               <li><NavLink href="/demos/use-shortcut" label="useShortcut" /></li>
               <li><NavLink href="/demos/use-toggle" label="useToggle" /></li>
             </ul>

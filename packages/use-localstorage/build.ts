@@ -4,7 +4,12 @@ import fs from 'fs'
 import childProcess from 'child_process'
 
 // remove dist folder
-fs.rmdirSync('dist', { recursive: true })
+try {
+  fs.rmSync('dist', { recursive: true })
+  console.log(`Cleaned up dist directory`)
+} catch (e) {
+  // Directory doesn't exist, ignore
+}
 console.log(`Cleaned up dist directory`)
 
 const peerDeps = Object.keys(pkg.peerDependencies || {})
